@@ -1,0 +1,99 @@
+﻿<Window x:Class="InfertilityTreatment.HomePage.AboutUsPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About Us - Fertility Hope Center"
+        Height="757" Width="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#F4FAFF">
+
+    <ScrollViewer>
+        <StackPanel Margin="30">
+
+            <!-- Title -->
+            <TextBlock Text="About Fertility Hope Center"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="#3A6EA5"
+                       Margin="0,0,0,20"/>
+
+            <!-- Hero Section -->
+            <Border Background="#E9F1FF" CornerRadius="12" Padding="20" Margin="0,0,0,30">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="D:\PRN212\Image\AboutUsIllustration.png"
+                           Grid.Column="0"
+                           Stretch="UniformToFill"
+                           Height="200"
+                           Margin="0,0,20,0"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           />
+
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Text="Our Mission"
+                                   FontSize="22"
+                                   FontWeight="SemiBold"
+                                   Foreground="#2E6BA0"
+                                   Margin="0,0,0,10"/>
+                        <TextBlock Text="At Fertility Hope Center, our mission is to provide compassionate, personalized fertility care that empowers individuals and couples to achieve their dream of parenthood."
+                                   TextWrapping="Wrap"
+                                   FontSize="14"
+                                   Foreground="Black"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- What We Do -->
+            <TextBlock Text="What We Do"
+                       FontSize="22"
+                       FontWeight="SemiBold"
+                       Foreground="#2E6BA0"
+                       Margin="0,0,0,10"/>
+            <TextBlock Text="We specialize in cutting-edge fertility treatments including IVF, IUI, egg preservation, and more. Our expert team of doctors, nurses, and counselors work together to ensure each patient receives the highest standard of care in a warm and supportive environment."
+                       TextWrapping="Wrap"
+                       FontSize="14"
+                       Foreground="Black"
+                       Margin="0,0,0,20"/>
+
+            <!-- Values -->
+            <TextBlock Text="Our Core Values"
+                       FontSize="22"
+                       FontWeight="SemiBold"
+                       Foreground="#2E6BA0"
+                       Margin="0,0,0,10"/>
+            <WrapPanel>
+                <Border Background="White" Width="200" Height="130" Margin="10" CornerRadius="10" Padding="10" BorderBrush="#DDD" BorderThickness="1">
+                    <StackPanel>
+                        <TextBlock Text="🤝 Compassion" FontWeight="Bold"/>
+                        <TextBlock Text="We treat every patient with empathy and understanding." FontSize="12" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" Width="200" Height="130" Margin="10" CornerRadius="10" Padding="10" BorderBrush="#DDD" BorderThickness="1">
+                    <StackPanel>
+                        <TextBlock Text="💡 Innovation" FontWeight="Bold"/>
+                        <TextBlock Text="We use the latest technology in fertility care." FontSize="12" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" Width="200" Height="130" Margin="10" CornerRadius="10" Padding="10" BorderBrush="#DDD" BorderThickness="1">
+                    <StackPanel>
+                        <TextBlock Text="🧑‍⚕️ Expertise" FontWeight="Bold"/>
+                        <TextBlock Text="Our staff are leaders in reproductive medicine." FontSize="12" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+            </WrapPanel>
+
+            <!-- Back Button -->
+            <Button Content="Back to Home"
+                    Width="150" Height="40"
+                    Margin="0,30,0,0"
+                    Background="#3A6EA5"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    Click="BackToHome_Click"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Admin\AdminManageHomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin\UserAccessHistoryDashPort.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin\UserManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Customer\BookAppointmentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Customer\CustomerAppoimentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Customer\CustomerConfirmCancelDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Customer\CustomerFeedBackPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Customer\CustomerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Doctor\DoctorAppointmentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Doctor\DoctorChartPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Doctor\DoctorFeedBackPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Doctor\DoctorHomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Doctor\MedicalRecordPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Doctor\RejectReasonWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InfertilityHomePage\AboutUsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InfertilityHomePage\ContactUsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InfertilityHomePage\ProfilePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InfertilityHomePage\UpdatePasswordPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InfertilityHomePage\WebHomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Manager\AddNewBlog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Manager\AddUpdateDoctorInformation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Manager\AddUpdateScheduleInfor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Manager\AppointmentCheckingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Manager\BlogManagerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Manager\DashSportPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Manager\DoctorManagerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Manager\FeedBackManagerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Manager\ManagerHomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Manager\NoteInputDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Manager\RejectReasonDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Manager\ServiceManagerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Register.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Admin\UserAccessHistoryDashPort.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Admin\UserManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Customer\BookAppointmentPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Customer\CustomerAppoimentPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Customer\CustomerConfirmCancelDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Customer\CustomerFeedBackPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Customer\CustomerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Doctor\DoctorAppointmentPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Doctor\DoctorChartPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Doctor\DoctorFeedBackPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Doctor\DoctorHomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Doctor\MedicalRecordPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Doctor\RejectReasonWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InfertilityHomePage\AboutUsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InfertilityHomePage\ContactUsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InfertilityHomePage\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InfertilityHomePage\UpdatePasswordPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InfertilityHomePage\WebHomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Manager\AddNewBlog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Manager\AddUpdateDoctorInformation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Manager\AddUpdateScheduleInfor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Manager\AppointmentCheckingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Manager\BlogManagerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Manager\DashSportPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Manager\DoctorManagerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Manager\FeedBackManagerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Manager\ManagerHomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Manager\NoteInputDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Manager\RejectReasonDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Manager\ServiceManagerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Register.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

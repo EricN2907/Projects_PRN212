@@ -1,0 +1,117 @@
+﻿<Window x:Class="InfertilityTreatment.Customer.BookAppointmentPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Book Appointment"
+        Height="620"
+        Width="1000"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Background>
+        <ImageBrush ImageSource="D:\PRN212\Image\BookingAppointment.png" Stretch="UniformToFill"/>
+    </Window.Background>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header Row -->
+        <DockPanel Margin="0,0,0,20">
+            <TextBlock Text="🗓️ Book Appointment"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="#2E6BA0"
+                       VerticalAlignment="Center"
+                       DockPanel.Dock="Left"/>
+
+            <Button Content="⬅ Back to Menu"
+                    Width="140" Height="35"
+                    Background="#4A90E2" Foreground="White"
+                    FontWeight="Bold"
+                    Click="BackToMenu_Click"
+                    Margin="0,0,5,0"
+                    DockPanel.Dock="Right"/>
+        </DockPanel>
+
+        <!-- Main Body -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.3*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="2.7*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Booking Form -->
+            <Border Background="White" CornerRadius="12" Padding="20" Margin="0,0,0,20">
+                <Border.Effect>
+                    <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="4" Opacity="0.3"/>
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="Booking Information" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,15"/>
+
+                    <TextBlock Text="Select Doctor:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <ComboBox x:Name="DoctorComboBox" Height="30" Margin="0,0,0,10"
+                              Loaded="DoctorComboBox_Loaded" SelectionChanged="DoctorComboBox_SelectionChanged"/>
+
+                    <TextBlock Text="Select Treatment Service:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <ComboBox x:Name="ServiceComboBox" Height="30" Margin="0,0,0,10"
+                              Loaded="ServiceComboBox_Loaded" SelectionChanged="ServiceComboBox_SelectionChanged"/>
+
+                    <TextBlock Text="Appointment Date:" FontWeight="Bold" Margin="0,0,0,5"/>
+
+                    <DatePicker x:Name="AppointmentDatePicker" Margin="0,0,0,10"/>
+                    <TextBlock Text="Appointment Time:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <ComboBox x:Name="HourComboBox"
+                            Width="80"
+                            Height="30"
+                            Margin="0,0,10,0"
+                            VerticalContentAlignment="Center"
+                            Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}"/>
+                            <TextBlock Text=":" VerticalAlignment="Center" FontSize="16"/>
+                            <ComboBox x:Name="MinuteComboBox"
+                             Width="80"
+                             Height="30"
+                             Margin="10,0,0,0"
+                             VerticalContentAlignment="Center"
+                              Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button Content="Submit" Width="100" Margin="0,10,10,0" Click="Submit_Click"/>
+                        <Button Content="Cancel" Width="100" Margin="0,10,0,0" Click="Cancel_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Doctor and Service Info -->
+            <StackPanel Grid.Column="2" VerticalAlignment="Top">
+
+                <Border Background="White" CornerRadius="12" Padding="20" Margin="0,0,0,20">
+                    <Border.Effect>
+                        <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="4" Opacity="0.3"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <TextBlock Text="Doctor Information" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10"/>
+                        <TextBlock x:Name="DoctorNameTextBlock" Text="Name: " Margin="0,5"/>
+                        <TextBlock x:Name="DoctorPhoneTextBlock" Text="Phone: " Margin="0,5"/>
+                        <TextBlock x:Name="DoctorAgeTextBlock" Text="Age: " Margin="0,5"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="White" CornerRadius="12" Padding="20" Margin="0,0,0,20">
+                    <Border.Effect>
+                        <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="4" Opacity="0.3"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <TextBlock Text="Service Information" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10"/>
+                        <TextBlock x:Name="ServiceNameTextBlock" Text="Name: " Margin="0,5"/>
+                        <TextBlock x:Name="ServicePriceTextBlock" Text="Price: " Margin="0,5"/>
+                        <TextBlock x:Name="ServiceDescriptionTextBlock" Text="Description: " TextWrapping="Wrap" Margin="0,5"/>
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

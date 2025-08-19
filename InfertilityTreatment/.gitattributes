@@ -1,0 +1,26 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# C# files
+*.cs text diff=csharp
+
+# XAML files
+*.xaml text
+
+# Treat project and solution files as text
+*.sln text
+*.csproj text
+*.props text
+*.targets text
+
+# Make image files binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+
+# Fonts and other binary files
+*.ttf binary
+*.woff binary
+*.woff2 binary

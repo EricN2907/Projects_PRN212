@@ -1,0 +1,67 @@
+﻿<Window x:Class="InfertilityTreatment.HomePage.ContactUsPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InfertilityTreatment.HomePage"
+        mc:Ignorable="d"
+        Title="Contact Us"
+        Height="500" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#F4FAFF">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title -->
+        <TextBlock Text="📞 Contact Us"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   Foreground="#3A6EA5"
+                   HorizontalAlignment="Center"
+                   Margin="0,10"/>
+
+        <!-- Contact Info Content -->
+        <Border Grid.Row="1"
+                Background="White"
+                CornerRadius="12"
+                Padding="30"
+                Margin="0,20,0,0"
+                BorderBrush="#DDEEFF"
+                BorderThickness="2">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Fertility Hope Center"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="#2E6BA0"
+                           TextAlignment="Center"
+                           Margin="0,0,0,16"/>
+                <TextBlock Text="📧 Email: contact@fertilityhope.com"
+                           FontSize="16"
+                           Foreground="#333"
+                           TextAlignment="Center"
+                           Margin="0,0,0,10"/>
+                <TextBlock Text="📞 Phone: (123) 456-7890"
+                           FontSize="16"
+                           Foreground="#333"
+                           TextAlignment="Center"
+                           Margin="0,0,0,10"/>
+                <TextBlock Text="🏥 Address: 123 Hope Street, Wellness City"
+                           FontSize="16"
+                           Foreground="#333"
+                           TextAlignment="Center"
+                           Margin="0,0,0,20"/>
+                <Button Content="Back to Home"
+                        Width="150"
+                        Height="40"
+                        Background="#3A6EA5"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Click="BackToHome_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

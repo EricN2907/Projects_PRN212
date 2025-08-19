@@ -1,0 +1,182 @@
+﻿<Window x:Class="InfertilityTreatment.Customer.CustomerPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Customer Dashboard"
+        Height="988" Width="1280"
+        WindowStartupLocation="CenterScreen"
+        Background="#F4FAFF">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <DockPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="👶 Fertility Hope Center"
+               FontSize="28"
+               FontWeight="Bold"
+               Foreground="#3A6EA5"
+               DockPanel.Dock="Left"/>
+           
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+                <!-- Notification Bell with Red Dot -->
+                <Button Width="40" Height="40"
+                 Background="Transparent"
+                BorderThickness="0"
+                Click="NotificationBell_Click"
+                ToolTip="View schedule notification"
+                Cursor="Hand">
+                    <Grid>
+                        <Image Source="D:\PRN212\Image\OIP.jpg" Width="24" Height="24"/>
+                        <Ellipse x:Name="NotificationDot"
+                 Width="10" Height="10"
+                 Fill="Red"
+                 Stroke="White"
+                 StrokeThickness="1"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Top"
+                 Visibility="Collapsed"/>
+                    </Grid>
+                </Button>
+
+
+                <!-- Avatar (Profile Navigation) -->
+                <Button Width="40" Height="40" Margin="5"
+                Click="btProfile_Click"
+                ToolTip="Profile"
+                BorderThickness="0"
+                Background="Transparent"
+                Cursor="Hand">
+                    <Ellipse Width="40" Height="40">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="D:\PRN212\Image\AvatarUser.png" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </Button>
+
+                <!-- Settings Menu -->
+                <Menu VerticalAlignment="Center">
+                    <MenuItem Header="⚙" FontSize="20" Padding="10,2" Click="MenuItem_Click">
+                        <MenuItem Header="Contact Us" Click="ContactUs_Click"/>
+                        <MenuItem Header="Logout" Click="Logout_Click"/>
+                    </MenuItem>
+                </Menu>
+            </StackPanel>
+        </DockPanel>
+
+        <!-- Main Content -->
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Margin="0,0,0,20">
+
+                <Border CornerRadius="12" Padding="20" Margin="0,0,0,20">
+                    <Border.Background>
+                        <ImageBrush ImageSource="D:\PRN212\Image\ServiceBackground.png" Stretch="UniformToFill"/>
+                    </Border.Background>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1.2*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="10">
+                            <TextBlock Text="Hope Begins Here" FontSize="30" FontWeight="Bold" Foreground="#2E6BA0"/>
+                            <TextBlock Text="Compassionate care to help you start your family."
+                       FontSize="18" Margin="0,10,0,20" TextWrapping="Wrap"/>
+                            <Button Content="Book Appointment"
+                            Width="180" Height="45"
+                            Background="#2E6BA0"
+                            Foreground="White"
+                            FontWeight="SemiBold"
+                            Click="btBookAppointment_Click"/>
+                            <Button Content="View Appointment"
+                            Width="180" Height="45"
+                            Background="LightPink"
+                            Foreground="White"
+                            FontWeight="SemiBold"
+                            Click="btViewAppointment_Click"/>
+                            <Button Content="Feed Back"
+                             Width="180" Height="45"
+                             Background="LightGreen"
+                             Foreground="White"
+                             FontWeight="SemiBold"
+                             Click="btFeedBack_Click"/>  
+                        </StackPanel>
+                        <Border Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" CornerRadius="8">
+                            <Image Source="D:\PRN212\Image\InfertilityTreatment.png"
+                   Stretch="Uniform"
+                   MaxHeight="300" Width="608"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <Border CornerRadius="12" Padding="20" Margin="0,0,0,20">
+                    <Border.Background>
+                        <ImageBrush ImageSource="D:\PRN212\Image\Background.png" Stretch="UniformToFill"/>
+                    </Border.Background>
+
+                    <Border Background="#CCFFFFFF" Padding="10" CornerRadius="12">
+                        <StackPanel>
+
+                            <!-- Services -->
+                            <TextBlock Text="Our Fertility Services" FontSize="22" FontWeight="Bold" Foreground="#2E6BA0"/>
+                            <WrapPanel Margin="0,10,0,20">
+                                <Border Background="#F8F9FA" Width="240" Height="130" Margin="10" Padding="10"
+                        CornerRadius="8" BorderBrush="#DDD" BorderThickness="1">
+                                    <StackPanel>
+                                        <TextBlock Text="IVF &amp; IUI Treatment" FontWeight="Bold"/>
+                                        <TextBlock Text="Safe and modern fertility solutions." FontSize="12" TextWrapping="Wrap"/>
+                                    </StackPanel>
+                                </Border>
+                                <Border Background="#F8F9FA" Width="240" Height="130" Margin="10" Padding="10"
+                        CornerRadius="8" BorderBrush="#DDD" BorderThickness="1">
+                                    <StackPanel>
+                                        <TextBlock Text="👩‍⚕️ Fertility Consultation" FontWeight="Bold"/>
+                                        <TextBlock Text="One-on-one session with our specialists." FontSize="12" TextWrapping="Wrap"/>
+                                    </StackPanel>
+                                </Border>
+                                <Border Background="#F8F9FA" Width="240" Height="130" Margin="10" Padding="10"
+                        CornerRadius="8" BorderBrush="#DDD" BorderThickness="1">
+                                    <StackPanel>
+                                        <TextBlock Text="💊 Hormonal Therapy" FontWeight="Bold"/>
+                                        <TextBlock Text="Personalized hormone balance programs." FontSize="12" TextWrapping="Wrap"/>
+                                    </StackPanel>
+                                </Border>
+                                <Border Background="#F8F9FA" Width="240" Height="130" Margin="10" Padding="10"
+                        CornerRadius="8" BorderBrush="#DDD" BorderThickness="1">
+                                    <StackPanel>
+                                        <TextBlock Text="🥗 Nutrition Support" FontWeight="Bold"/>
+                                        <TextBlock Text="Boost fertility with diet guidance." FontSize="12" TextWrapping="Wrap"/>
+                                    </StackPanel>
+                                </Border>
+                            </WrapPanel>
+
+                            <!-- Blog Section -->
+                            <ScrollViewer Margin="20,20,20,20" VerticalScrollBarVisibility="Auto">
+                                <StackPanel>
+                                    <TextBlock Text="📚 Latest from Our Blog"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   Foreground="#2E6BA0"
+                   Margin="0,0,0,10"/>
+                                    <WrapPanel x:Name="BlogWrapPanel"
+                   HorizontalAlignment="Center"
+                   />
+                                </StackPanel>
+                            </ScrollViewer>
+
+                        </StackPanel>
+                    </Border>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Footer -->
+        <TextBlock Grid.Row="2"
+                   Text="© 2025 Fertility Hope Center. All rights reserved."
+                   FontSize="12"
+                   HorizontalAlignment="Center"
+                   Foreground="Gray"
+                   Margin="0,20,0,0"/>
+    </Grid>
+</Window>

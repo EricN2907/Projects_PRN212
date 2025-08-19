@@ -1,0 +1,82 @@
+﻿<Window x:Class="InfertilityTreatment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InfertilityTreatment"
+        mc:Ignorable="d"
+        Title="Infertility Treatment - Login"
+        Height="450"
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#F4FAFF"
+        WindowState="Maximized">
+
+    <Grid>
+        <Border VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Width="400"
+                Background="White"
+                Padding="30"
+                CornerRadius="12"
+                BorderBrush="#DDD"
+                BorderThickness="1">
+            <StackPanel>
+                <TextBlock Text="👶 Fertility Hope Center"
+                           FontSize="28"
+                           FontWeight="Bold"
+                           Foreground="#3A6EA5"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+                <TextBlock Text="Username:"
+                           FontSize="18"
+                           Foreground="Black"
+                           Margin="0,0,0,5"/>
+                <TextBox Name="txtUserName"
+                         FontSize="16"
+                         Height="35"
+                         Background="White"
+                         Foreground="Black"
+                         Padding="5"
+                         Margin="0,0,0,15"/>
+
+                <TextBlock Text="Password:"
+                           FontSize="18"
+                           Foreground="Black"
+                           Margin="0,0,0,5"/>
+                <PasswordBox Name="txtPassword"
+                             FontSize="16"
+                             Height="35"
+                             Background="White"
+                             Foreground="Black"
+                             Padding="5"
+                             Margin="0,0,0,25"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Name="btLogin"
+                            Content="Login"
+                            Width="120"
+                            Height="40"
+                            Margin="5"
+                            Background="#2E6BA0"
+                            Foreground="White"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Click="btLogin_Click"/>
+
+                    <Button Name="btRegister"
+                            Content="Register"
+                            Width="120"
+                            Height="40"
+                            Margin="5"
+                            Background="#FF80AB"
+                            Foreground="White"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Click="btRegister_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,48 @@
+﻿<Window x:Class="InfertilityTreatment.Customer.CustomerFeedBackPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Customer Feedback" Height="400" Width="500"
+        WindowStartupLocation="CenterScreen"
+        Background="#F9FAFB">
+
+    <Grid Margin="20">
+        <Border Background="White" Padding="20" CornerRadius="10" BorderBrush="#D1D5DB" BorderThickness="1">
+            <StackPanel>
+
+                <TextBlock Text="📝 Your Feedback"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Foreground="#2C3E50"
+                           Margin="0,0,0,20"/>
+
+                <!-- Rating -->
+                <StackPanel Margin="0,0,0,10">
+                    <TextBlock Text="Rate your experience (1 to 5):" FontWeight="SemiBold"/>
+                    <ComboBox x:Name="RatingComboBox" Width="100" Height="30">
+                        <ComboBoxItem Content="1" />
+                        <ComboBoxItem Content="2" />
+                        <ComboBoxItem Content="3" />
+                        <ComboBoxItem Content="4" />
+                        <ComboBoxItem Content="5" />
+                    </ComboBox>
+                </StackPanel>
+
+                <!-- Comment -->
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="Your Comment:" FontWeight="SemiBold"/>
+                    <TextBox x:Name="CommentTextBox" Height="100" TextWrapping="Wrap" AcceptsReturn="True"/>
+                </StackPanel>
+
+                <!-- Submit Button -->
+                <Button Content="Submit Feedback"
+                        Width="200"
+                        Height="40"
+                        Background="#27AE60"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        Click="SubmitFeedback_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

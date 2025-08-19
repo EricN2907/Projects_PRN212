@@ -1,0 +1,95 @@
+﻿<Window x:Class="InfertilityTreatment.Manager.ManagerHomePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Manager Home Page" Height="547" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFF7F9FB">
+
+    <Window.Resources>
+        <!-- Button Style -->
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="220"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#4682B4"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="25" Padding="5">
+                            <Border.Effect>
+                                <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="2"/>
+                            </Border.Effect>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#5A9BD5"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+
+        <!-- Background Image -->
+        <Grid.Background>
+            <ImageBrush ImageSource="D:\PRN212\Image\PeaceOnHospital.jpg" Stretch="UniformToFill" />
+        </Grid.Background>
+
+        <!-- Top Bar -->
+        <DockPanel LastChildFill="False" Background="#FFDEEAF6" Height="60" VerticalAlignment="Top">
+            <!-- Title -->
+            <TextBlock Text="INFERTILITY TREATMENT"
+               FontWeight="Bold"
+               FontSize="20"
+               VerticalAlignment="Center"
+               Margin="20,0,0,0"
+               Foreground="#2B2B2B"/>
+
+            <!-- Right-side Stack: Avatar + Settings -->
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,10,0">
+                <!-- Avatar -->
+                <Grid Width="40" Height="40" Margin="0,0,10,0">
+                    <Ellipse Width="40" Height="40">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="D:\PRN212\Image\AvatarUser.png"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <!-- Transparent Button on top of Avatar -->
+                    <Button x:Name="btProfile"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Click="btProfile_Click"
+                    ToolTip="Profile"
+                    Cursor="Hand"/>
+                </Grid>
+
+                <!-- Settings Menu (⚙ with Logout) -->
+                <Menu VerticalAlignment="Center">
+                    <MenuItem Header="⚙" FontSize="20" Padding="10,2">
+                        <MenuItem Header="🚪 Logout" Click="Logout_Click"/>
+                    </MenuItem>
+                </Menu>
+            </StackPanel>
+        </DockPanel>
+
+
+        <!-- Main Buttons -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,40,0,0">
+            <Button Content="📝 Manager News" Style="{StaticResource RoundedButtonStyle}" Click="ManagerBlog_Click"/>
+            <Button Content="📅 Manager Appointment" Style="{StaticResource RoundedButtonStyle}" Click="ManagerAppointment_Click"/>
+            <Button Content="👨‍⚕️ Manager Doctor" Style="{StaticResource RoundedButtonStyle}" Click="ManagerDoctor_Click"/>
+            <Button Content="🧪 Service Manager" Style="{StaticResource RoundedButtonStyle}" Click="ManagerService_Click"/>
+            <Button Content=" FeedBack Manager" Style="{StaticResource RoundedButtonStyle}" Click="FeedBack_Click"/>
+            <Button Content=" Dash Port" Style="{StaticResource RoundedButtonStyle}" Click="DashPort_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

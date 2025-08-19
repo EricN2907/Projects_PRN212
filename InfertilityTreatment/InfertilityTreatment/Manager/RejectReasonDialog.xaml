@@ -1,0 +1,28 @@
+﻿<Window x:Class="InfertilityTreatment.Manager.RejectReasonDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Reject Appointment"
+        Height="200" Width="400"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Please enter the reason for rejection:"
+                   FontWeight="Bold" Margin="0,0,0,5"/>
+        <TextBox x:Name="ReasonTextBox" Grid.Row="1"
+                 AcceptsReturn="True" TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal"
+                    HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Cancel" Width="75" Margin="0,0,10,0"
+                    Click="Cancel_Click"/>
+            <Button Content="OK" Width="75" Click="Ok_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,131 @@
+﻿<Window x:Class="InfertilityTreatment.Doctor.DoctorAppointmentPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Doctor Appointment Management" Height="600" Width="1200"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <!-- Background -->
+        <Grid.Background>
+            <ImageBrush ImageSource="D:\PRN212\Image\AppointmentCheckingPage.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <DockPanel Margin="0,0,0,10" LastChildFill="False" Background="White">
+                <TextBlock Text="👨‍⚕️ My Appointments"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"
+                           Foreground="#2E6BA0"
+                           Margin="5"
+                           DockPanel.Dock="Left" />
+
+                <Button Content="⬅ Back to Home"
+                        Width="140" Height="35"
+                        Background="#4A90E2" Foreground="White"
+                        FontWeight="Bold"
+                        Click="BackToHome_Click"
+                        Margin="0,0,5,0"
+                        DockPanel.Dock="Right"/>
+            </DockPanel>
+
+            <!-- Appointments Columns -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Pending -->
+                <StackPanel x:Name="PendingPanel" Grid.Column="0" Margin="0,0,10,0" Background="White">
+                    <TextBlock Text="⏳ Pending" FontSize="18" FontWeight="Bold" Margin="5" />
+                    <ListView x:Name="PendingListView" Margin="5">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Border Background="#F9F9F9" CornerRadius="5" Margin="5" Padding="5">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding CustomerName}" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding Date}" Foreground="Gray"/>
+                                        <TextBlock Text="{Binding ServiceName}" Foreground="Gray"/>
+                                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                            <Button Content="Accept" Width="60" Margin="0,0,5,0"
+                                                Click="Accept_Click"/>
+                                            <Button Content="Reject" Width="60"
+                                                Click="Reject_Click"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+
+                <!-- Accepted -->
+                <StackPanel x:Name="AcceptedPanel" Grid.Column="1" Margin="5,0" Background="White">
+                    <TextBlock Text="✅ Accepted" FontSize="18" FontWeight="Bold" Margin="5" />
+                    <ListView x:Name="AcceptedListView" Margin="5">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Border Background="#E0F7E0" CornerRadius="5" Margin="5" Padding="5">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding CustomerName}" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding Date}" Foreground="Gray"/>
+                                        <TextBlock Text="{Binding ServiceName}" Foreground="Gray"/>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+
+                <!-- Rejected -->
+                <StackPanel x:Name="RejectedPanel" Grid.Column="2" Margin="10,0,0,0" Background="White">
+                    <TextBlock Text="❌ Rejected" FontSize="18" FontWeight="Bold" Margin="5" />
+                    <ListView x:Name="RejectedListView" Margin="5">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Border Background="#FDE0E0" CornerRadius="5" Margin="5" Padding="5">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding CustomerName}" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding Date}" Foreground="Gray"/>
+                                        <TextBlock Text="{Binding ServiceName}" Foreground="Gray"/>
+                                        <TextBlock Text="Reject Reason:" FontWeight="Bold" Margin="5"/>
+                                        <TextBlock Text="{Binding RejectReason}" Foreground="Gray"/>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </Grid>
+
+            <!-- Doctor Schedule -->
+            <Border Grid.Row="2" Background="White" CornerRadius="10" Padding="10" Margin="0,10,0,0">
+                <Border.Effect>
+                    <DropShadowEffect Color="Gray" BlurRadius="10" ShadowDepth="3" Opacity="0.3" />
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="📅 My Schedule" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10" />
+                    <ListView x:Name="DoctorScheduleList" Height="150">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}" Width="150"/>
+                                <GridViewColumn Header="Time" DisplayMemberBinding="{Binding Time}" Width="100"/>
+                                <GridViewColumn Header="Customer" DisplayMemberBinding="{Binding CustomerName}" Width="200"/>
+                                <GridViewColumn Header="Service" DisplayMemberBinding="{Binding ServiceName}" Width="200"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

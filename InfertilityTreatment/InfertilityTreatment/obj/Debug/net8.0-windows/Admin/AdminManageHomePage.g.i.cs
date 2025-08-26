@@ -69,7 +69,7 @@ namespace InfertilityTreatment.Admin {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;component/admin/adminmanagehomepage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;V1.0.0.0;component/admin/adminmanagehomepage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Admin\AdminManageHomePage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

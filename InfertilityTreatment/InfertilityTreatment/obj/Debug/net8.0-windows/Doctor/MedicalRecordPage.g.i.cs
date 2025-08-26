@@ -92,7 +92,7 @@ namespace InfertilityTreatment.Doctor {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;component/doctor/medicalrecordpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;V1.0.0.0;component/doctor/medicalrecordpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Doctor\MedicalRecordPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

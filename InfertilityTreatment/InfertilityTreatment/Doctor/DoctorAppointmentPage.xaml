@@ -18,7 +18,15 @@
             </Grid.RowDefinitions>
 
             <!-- Header -->
-            <DockPanel Margin="0,0,0,10" LastChildFill="False" Background="White">
+            <DockPanel Margin="0,0,0,21" LastChildFill="False" Background="White" RenderTransformOrigin="0.5,0.5">
+                <DockPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="4.158"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="1.427"/>
+                    </TransformGroup>
+                </DockPanel.RenderTransform>
                 <TextBlock Text="👨‍⚕️ My Appointments"
                            FontSize="22"
                            FontWeight="Bold"
@@ -44,70 +52,78 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <!-- Pending -->
-                <StackPanel x:Name="PendingPanel" Grid.Column="0" Margin="0,0,10,0" Background="White">
-                    <TextBlock Text="⏳ Pending" FontSize="18" FontWeight="Bold" Margin="5" />
-                    <ListView x:Name="PendingListView" Margin="5">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <Border Background="#F9F9F9" CornerRadius="5" Margin="5" Padding="5">
-                                    <StackPanel>
-                                        <TextBlock Text="{Binding CustomerName}" FontWeight="Bold"/>
-                                        <TextBlock Text="{Binding Date}" Foreground="Gray"/>
-                                        <TextBlock Text="{Binding ServiceName}" Foreground="Gray"/>
-                                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                                            <Button Content="Accept" Width="60" Margin="0,0,5,0"
-                                                Click="Accept_Click"/>
-                                            <Button Content="Reject" Width="60"
-                                                Click="Reject_Click"/>
+                <!-- Pending Column -->
+                <TextBlock Text="⏳ Pending" FontSize="30" FontWeight="Bold" Foreground="Black" Margin="10"/>
+
+                <StackPanel x:Name="PendingPanel" Grid.Column="0" Margin="0,54,10,0" Background="White" Height="Auto">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <ListView x:Name="PendingListView" Margin="5">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="#F9F9F9" CornerRadius="5" Margin="5" Padding="5">
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding CustomerName}" FontWeight="Bold" Foreground="Black"/>
+                                            <TextBlock Text="{Binding Date}" Foreground="Gray"/>
+                                            <TextBlock Text="{Binding ServiceName}" Foreground="Gray"/>
+                                            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                                <Button Content="Accept" Width="80" Margin="0,0,5,0" Click="Accept_Click"/>
+                                                <Button Content="Reject" Width="80" Click="Reject_Click"/>
+                                            </StackPanel>
                                         </StackPanel>
-                                    </StackPanel>
-                                </Border>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                                    </Border>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
                 </StackPanel>
 
-                <!-- Accepted -->
-                <StackPanel x:Name="AcceptedPanel" Grid.Column="1" Margin="5,0" Background="White">
-                    <TextBlock Text="✅ Accepted" FontSize="18" FontWeight="Bold" Margin="5" />
-                    <ListView x:Name="AcceptedListView" Margin="5">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <Border Background="#E0F7E0" CornerRadius="5" Margin="5" Padding="5">
-                                    <StackPanel>
-                                        <TextBlock Text="{Binding CustomerName}" FontWeight="Bold"/>
-                                        <TextBlock Text="{Binding Date}" Foreground="Gray"/>
-                                        <TextBlock Text="{Binding ServiceName}" Foreground="Gray"/>
-                                    </StackPanel>
-                                </Border>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                <!-- Accepted Column -->
+                <TextBlock Text="✅ Accepted" FontSize="30" FontWeight="Bold" Foreground="Black" Margin="9,7,12,13" Grid.Column="1"/>
+
+                <StackPanel x:Name="AcceptedPanel" Grid.Column="1" Margin="5,51,5,0" Background="White" Height="Auto">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <ListView x:Name="AcceptedListView" Margin="5">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="#E0F7E0" CornerRadius="5" Margin="5" Padding="5">
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding CustomerName}" FontWeight="Bold" Foreground="Black"/>
+                                            <TextBlock Text="{Binding Date}" Foreground="Gray"/>
+                                            <TextBlock Text="{Binding ServiceName}" Foreground="Gray"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
                 </StackPanel>
 
-                <!-- Rejected -->
-                <StackPanel x:Name="RejectedPanel" Grid.Column="2" Margin="10,0,0,0" Background="White">
-                    <TextBlock Text="❌ Rejected" FontSize="18" FontWeight="Bold" Margin="5" />
-                    <ListView x:Name="RejectedListView" Margin="5">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <Border Background="#FDE0E0" CornerRadius="5" Margin="5" Padding="5">
-                                    <StackPanel>
-                                        <TextBlock Text="{Binding CustomerName}" FontWeight="Bold"/>
-                                        <TextBlock Text="{Binding Date}" Foreground="Gray"/>
-                                        <TextBlock Text="{Binding ServiceName}" Foreground="Gray"/>
-                                        <TextBlock Text="Reject Reason:" FontWeight="Bold" Margin="5"/>
-                                        <TextBlock Text="{Binding RejectReason}" Foreground="Gray"/>
-                                    </StackPanel>
-                                </Border>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                <!-- Rejected Column -->
+                <TextBlock Text="❌ Rejected" FontSize="30" FontWeight="Bold" Foreground="Black" Margin="12,7,8,13" Grid.Column="2"/>
+
+                <StackPanel x:Name="RejectedPanel" Grid.Column="2" Margin="10,53,0,0" Background="White" Height="Auto">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <ListView x:Name="RejectedListView" Margin="5">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="#FDE0E0" CornerRadius="5" Margin="5" Padding="5">
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding CustomerName}" FontWeight="Bold" Foreground="Black"/>
+                                            <TextBlock Text="{Binding Date}" Foreground="Gray"/>
+                                            <TextBlock Text="{Binding ServiceName}" Foreground="Gray"/>
+                                            <TextBlock Text="Reject Reason:" FontWeight="Bold" Margin="5" Foreground="Black"/>
+                                            <TextBlock Text="{Binding RejectReason}" Foreground="Gray"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
                 </StackPanel>
+
             </Grid>
 
-            <!-- Doctor Schedule -->
+            <!-- Doctor Schedule Section -->
             <Border Grid.Row="2" Background="White" CornerRadius="10" Padding="10" Margin="0,10,0,0">
                 <Border.Effect>
                     <DropShadowEffect Color="Gray" BlurRadius="10" ShadowDepth="3" Opacity="0.3" />

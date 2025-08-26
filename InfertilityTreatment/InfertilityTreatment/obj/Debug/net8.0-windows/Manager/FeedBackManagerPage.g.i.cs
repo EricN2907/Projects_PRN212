@@ -68,7 +68,7 @@ namespace InfertilityTreatment.Manager {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;component/manager/feedbackmanagerpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;V1.0.0.0;component/manager/feedbackmanagerpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Manager\FeedBackManagerPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

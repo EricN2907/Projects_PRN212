@@ -61,7 +61,7 @@ namespace InfertilityTreatment.Admin {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;component/admin/useraccesshistorydashport.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;V1.0.0.0;component/admin/useraccesshistorydashport.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Admin\UserAccessHistoryDashPort.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

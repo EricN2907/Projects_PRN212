@@ -70,7 +70,7 @@ namespace InfertilityTreatment.Doctor {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;component/doctor/doctorchartpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;V1.0.0.0;component/doctor/doctorchartpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Doctor\DoctorChartPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

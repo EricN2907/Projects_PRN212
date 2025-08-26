@@ -61,7 +61,8 @@ namespace InfertilityTreatment.Customer {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;component/customer/customerconfirmcanceldialog.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;V1.0.0.0;component/customer/customerconfirmcanceldialog.xam" +
+                    "l", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Customer\CustomerConfirmCancelDialog.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -92,7 +92,7 @@ namespace InfertilityTreatment.InfertilityHomePage {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;component/infertilityhomepage/webhomepage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;V1.0.0.0;component/infertilityhomepage/webhomepage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\InfertilityHomePage\WebHomePage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

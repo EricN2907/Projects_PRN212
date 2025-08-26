@@ -125,6 +125,7 @@ namespace InfertilityTreatment.Doctor
 
         private void AcceptBtn_Click(object sender, RoutedEventArgs e)
         {
+
             var appointment = (sender as Button)?.Tag as Appointment;
             if (appointment == null) return;
 

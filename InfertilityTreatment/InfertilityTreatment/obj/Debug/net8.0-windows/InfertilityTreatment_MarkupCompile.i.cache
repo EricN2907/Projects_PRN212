@@ -16,5 +16,5 @@ D:\FPT\PRN211\Project\InfertilityTreatment\InfertilityTreatment\App.xaml
 238-2041592517
 Admin\AdminManageHomePage.xaml;Admin\UserAccessHistoryDashPort.xaml;Admin\UserManager.xaml;Customer\BookAppointmentPage.xaml;Customer\CustomerAppoimentPage.xaml;Customer\CustomerConfirmCancelDialog.xaml;Customer\CustomerFeedBackPage.xaml;Customer\CustomerPage.xaml;Doctor\DoctorAppointmentPage.xaml;Doctor\DoctorChartPage.xaml;Doctor\DoctorFeedBackPage.xaml;Doctor\DoctorHomePage.xaml;Doctor\MedicalRecordPage.xaml;Doctor\RejectReasonWindow.xaml;InfertilityHomePage\AboutUsPage.xaml;InfertilityHomePage\ContactUsPage.xaml;InfertilityHomePage\ProfilePage.xaml;InfertilityHomePage\UpdatePasswordPage.xaml;InfertilityHomePage\WebHomePage.xaml;MainWindow.xaml;Manager\AddNewBlog.xaml;Manager\AddUpdateDoctorInformation.xaml;Manager\AddUpdateScheduleInfor.xaml;Manager\AppointmentCheckingPage.xaml;Manager\BlogManagerPage.xaml;Manager\DashSportPage.xaml;Manager\DoctorManagerPage.xaml;Manager\FeedBackManagerPage.xaml;Manager\ManagerHomePage.xaml;Manager\NoteInputDialog.xaml;Manager\RejectReasonDialog.xaml;Manager\ServiceManagerPage.xaml;Register.xaml;
 
-True
+False
 

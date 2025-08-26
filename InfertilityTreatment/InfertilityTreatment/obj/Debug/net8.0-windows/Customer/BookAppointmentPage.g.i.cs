@@ -140,7 +140,7 @@ namespace InfertilityTreatment.Customer {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;component/customer/bookappointmentpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InfertilityTreatment;V1.0.0.0;component/customer/bookappointmentpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Customer\BookAppointmentPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

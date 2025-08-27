@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\FPT\\PRN211\\Project\\InfertilityTreatment\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EDC9E7D6-B4C2-491E-8339-A73367E2713C}|InfertilityTreatment\\InfertilityTreatment.csproj|d:\\fpt\\prn211\\project\\infertilitytreatment\\infertilitytreatment\\manager\\doctormanagerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EDC9E7D6-B4C2-491E-8339-A73367E2713C}|InfertilityTreatment\\InfertilityTreatment.csproj|solutionrelative:infertilitytreatment\\manager\\doctormanagerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDC9E7D6-B4C2-491E-8339-A73367E2713C}|InfertilityTreatment\\InfertilityTreatment.csproj|d:\\fpt\\prn211\\project\\infertilitytreatment\\infertilitytreatment\\manager\\doctormanagerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDC9E7D6-B4C2-491E-8339-A73367E2713C}|InfertilityTreatment\\InfertilityTreatment.csproj|solutionrelative:infertilitytreatment\\manager\\doctormanagerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9C13D036-CC10-48A2-B801-2DA004AAC9DA}|BusinessObject\\BusinessObject.csproj|d:\\fpt\\prn211\\project\\infertilitytreatment\\businessobject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{9C13D036-CC10-48A2-B801-2DA004AAC9DA}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,7 +30,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DoctorManagerPage.xaml.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN211\\Project\\InfertilityTreatment\\InfertilityTreatment\\Manager\\DoctorManagerPage.xaml.cs",
+              "RelativeDocumentMoniker": "InfertilityTreatment\\Manager\\DoctorManagerPage.xaml.cs",
+              "ToolTip": "D:\\FPT\\PRN211\\Project\\InfertilityTreatment\\InfertilityTreatment\\Manager\\DoctorManagerPage.xaml.cs",
+              "RelativeToolTip": "InfertilityTreatment\\Manager\\DoctorManagerPage.xaml.cs",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T11:58:26.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DoctorManagerPage.xaml",
+              "DocumentMoniker": "D:\\FPT\\PRN211\\Project\\InfertilityTreatment\\InfertilityTreatment\\Manager\\DoctorManagerPage.xaml",
+              "RelativeDocumentMoniker": "InfertilityTreatment\\Manager\\DoctorManagerPage.xaml",
+              "ToolTip": "D:\\FPT\\PRN211\\Project\\InfertilityTreatment\\InfertilityTreatment\\Manager\\DoctorManagerPage.xaml",
+              "RelativeToolTip": "InfertilityTreatment\\Manager\\DoctorManagerPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-26T11:58:18.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\FPT\\PRN211\\Project\\InfertilityTreatment\\BusinessObject\\appsettings.json",
               "RelativeDocumentMoniker": "BusinessObject\\appsettings.json",
